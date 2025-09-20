@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Header } from './components/Header';
+import { HoneyComb } from './components/HoneyComb';
 import './App.css'
 
 function App() {
@@ -17,7 +18,22 @@ function App() {
 
   return (
     <>
-    { data ? <Header date={data.displayDate} editor={data.editor} /> : <p>...Loading</p> }
+    { data ? 
+    <>
+    <Header date={data.displayDate} editor={data.editor} /> 
+    <section className='container'>
+      <div className='inputs'>
+        <div className='center'>
+          <HoneyComb centerLetter={data.centerLetter} outerLetters={data.outerLetters} 
+          validLetters={data.validLetters}></HoneyComb>
+        </div>
+      </div>
+    </section>
+    </>
+    :<p>...Loading</p> 
+    
+    }
+
     </>
   )
 }
