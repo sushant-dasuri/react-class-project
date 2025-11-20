@@ -19,6 +19,10 @@ body {
   align-items: center;
 }
 
+.score {
+  font-weight: bold;
+}
+
 .inputs {
   width: 80vw;
   max-width: 290px;
