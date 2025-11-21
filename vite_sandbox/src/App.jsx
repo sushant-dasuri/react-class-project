@@ -65,7 +65,7 @@ function App() {
     <section className='container'>
       <div className='inputs'>
         <div className='center'>
-          <Guess guess={guess}></Guess>
+          <Guess guess={guess} centerLetter={data.centerLetter}></Guess>
           <HoneyComb centerLetter={data.centerLetter} outerLetters={data.outerLetters} 
           validLetters={data.validLetters} addLetter={addLetter} removeLetter={removeLetter} checkGuess={checkGuess}></HoneyComb>
         </div>
